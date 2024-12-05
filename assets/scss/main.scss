@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// // assets/scss/main.scss
+// :root {
+//   --color-primary: #4f43d6; // Example: Tailwind's blue-500
+//   --color-primary-25: #F8F6FF;
+//   --color-primary-50: #EAE9FF;
+//   --color-primary-100: #C4BFF6;
+//   --color-primary-200: #9D96EA;
+//   --color-primary-300: #766DE0;
+//   --color-primary-400: #4F43D6
+//   --color-primary-500: #3529BC;
+//   --color-primary-600: #282093;
+//   --color-primary-700: #1D166B;
+//   --color-primary-content: #ffffff; // Example: Tailwind's red-500
+
+// }
+
+// Icons size when using nuxt-icon
+.icon-16 svg {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+.icon-18 svg {
+  height: 18px !important;
+  width: 18px !important;
+}
+
+.icon-20 svg {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.icon-22 svg {
+  height: 22px !important;
+  width: 22px !important;
+}
+
+.icon-24 svg {
+  height: 24px !important;
+  width: 24px !important;
+}
+
+.icon-26 svg {
+  height: 26px !important;
+  width: 26px !important;
+}
+
+.icon-28 svg {
+  height: 28px !important;
+  width: 28px !important;
+}
+
+.icon-30 svg {
+  height: 30px !important;
+  width: 30px !important;
+}
+
+.icon-32 svg {
+  height: 32px !important;
+  width: 32px !important;
+}
+
+.icon-34 svg {
+  height: 34px !important;
+  width: 34px !important;
+}
+
+.icon-96 svg {
+  height: 96px !important;
+  width: 96px !important;
+}
+
+.icon-success svg {
+  height: 124px !important;
+  width: 124px !important;
+}
