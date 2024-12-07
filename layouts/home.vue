@@ -1,8 +1,9 @@
 <template>
-  <UINavAppBar />
-  <main class="mt-14 tracking-tight">
+  <!-- <UINavBar /> -->
+  <div class="tracking-tight">
     <slot />
-  </main>
+  </div>
+
   <!-- <UIAlert :alertText="alertMessage" :type="alertType" /> -->
   <!-- <Footer /> -->
 </template>

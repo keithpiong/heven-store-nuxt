@@ -1,28 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
-
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-// // assets/scss/main.scss
-// :root {
-//   --color-primary: #4f43d6; // Example: Tailwind's blue-500
-//   --color-primary-25: #F8F6FF;
-//   --color-primary-50: #EAE9FF;
-//   --color-primary-100: #C4BFF6;
-//   --color-primary-200: #9D96EA;
-//   --color-primary-300: #766DE0;
-//   --color-primary-400: #4F43D6
-//   --color-primary-500: #3529BC;
-//   --color-primary-600: #282093;
-//   --color-primary-700: #1D166B;
-//   --color-primary-content: #ffffff; // Example: Tailwind's red-500
-
-// }
 
 // Icons size when using nuxt-icon
 .icon-16 svg {
