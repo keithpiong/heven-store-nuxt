@@ -1,12 +1,9 @@
 <template>
-  <UINavAppBar />
-  <main class="mt-14 tracking-tight">
+  <UINavToolBar />
+  <ProductCartDrawer />
+  <main class="mt-14 tracking-tight max-w-screen-sm">
     <slot />
   </main>
-  <!-- <UIAlert :alertText="alertMessage" :type="alertType" /> -->
+
   <!-- <Footer /> -->
 </template>
-
-<script setup lang="ts">
-const { alertMessage, alertType } = useAlert();
-</script>

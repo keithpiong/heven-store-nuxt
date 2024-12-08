@@ -1,11 +1,7 @@
 <template>
-  <!-- <UINavBar /> -->
-  <div class="tracking-tight">
+  <main>
     <slot />
-  </div>
-
-  <!-- <UIAlert :alertText="alertMessage" :type="alertType" /> -->
-  <!-- <Footer /> -->
+  </main>
 </template>
 
 <script setup lang="ts">

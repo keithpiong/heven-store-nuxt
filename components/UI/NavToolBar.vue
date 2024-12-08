@@ -7,7 +7,9 @@
         <UIIcon name="arrow-left" />
       </a>
       <!-- <p>{{ props.title }}</p> -->
-      <UIIcon name="bag" />
+      <a @click="openCart">
+        <UIIcon name="bag" />
+      </a>
     </div>
   </header>
 </template>
@@ -17,7 +19,13 @@ const props = defineProps<{
   // title?: string;
 }>();
 
+const { showCartDrawer } = useModal();
+
 const goBack = () => {
   window.history.back();
+};
+
+const openCart = () => {
+  showCartDrawer();
 };
 </script>
