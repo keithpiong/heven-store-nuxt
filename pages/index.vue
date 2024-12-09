@@ -35,12 +35,6 @@
 </template>
 
 <script lang="ts" setup>
-const { getMockProducts } = useProduct();
-
-const products = computed(() => {
-  return getMockProducts();
-});
-
 definePageMeta({
   layout: "home",
 });
