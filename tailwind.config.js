@@ -1,3 +1,5 @@
+const daisyui = require("daisyui");
+
 export default {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -16,6 +18,11 @@ export default {
     fontFamily: {
       sans: ["Nunito Sans", "sans-serif"],
     },
+  },
+  plugins: [daisyui],
+  daisyui: {
+    themes: [],
+    styled: false,
   },
   // Safelisting some classes to avoid content purge
   safelist: [

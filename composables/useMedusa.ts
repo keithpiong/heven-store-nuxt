@@ -1,3 +1,5 @@
+import type { Product } from "~/types/product";
+
 export function useMedusa() {
   const client = useMedusaClient();
 
@@ -26,6 +28,14 @@ export function useMedusa() {
     return products;
   };
 
+  const getProductById = async (productId: string) => {
+    const { product } = await client.store.product.retrieve(productId, {
+      region_id: "reg_01JENKMBTA7SW78K07JS6F5WE7",
+    });
+    let obj = JSON.stringify(product);
+    return JSON.parse(obj) as Product;
+  };
+
   // const getOrders = async () => {
   //   const { products } = await client.
   //   return products;
@@ -34,5 +44,6 @@ export function useMedusa() {
   return {
     initCart,
     getProducts,
+    getProductById,
   };
 }

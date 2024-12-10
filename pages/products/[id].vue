@@ -1,21 +1,19 @@
 <template>
-  <div class="flex flex-col px-4 pb-40 relative">
-    <div class="rounded-3xl overflow-clip">
-      <img src="/images/hero.jpg" />
+  <div v-if="product" class="flex flex-col px-4 pb-40 relative">
+    <div class="rounded-3xl h-3/4">
+      <ProductCarousel :images="product.images" />
     </div>
 
     <div class="flex flex-col mt-8 p-4 rounded-xl border-background border">
-      <p class="text-xl font-medium">Eden Euphoria</p>
+      <p class="text-xl font-medium">{{ product.title }}</p>
       <p class="text-base font-light mt-4">
-        English Pear & Freesia candle, made with 100% soy wax, weighs 90g and
-        measures 6cm in width by 6.5cm in height, offering up to 25 hours of
-        burn time.
+        {{ product.description }}
       </p>
     </div>
 
     <div class="mt-4 flex flex-col p-4 rounded-xl border-background border">
       <p class="text-sm">Price</p>
-      <p class="text-2xl font-semibold mt-2">RM38.00</p>
+      <p class="text-2xl font-semibold mt-2">RM{{ getCalculatedPrice }}</p>
     </div>
 
     <div
@@ -31,5 +29,27 @@
 </template>
 
 <script setup lang="ts">
+import type { Product } from "~/types/product";
+
 const route = useRoute();
+const { getProductById } = useMedusa();
+
+const product = ref<Product>();
+
+const fetchProduct = async () => {
+  let response = await getProductById(route.params.id as string);
+  product.value = response;
+};
+
+const getCalculatedPrice = computed(() => {
+  if (product.value && product.value.variants.length > 1) {
+  } else {
+    return product.value?.variants[0].calculated_price.original_amount;
+  }
+});
+
+onMounted(() => {
+  // initCart();
+  fetchProduct();
+});
 </script>

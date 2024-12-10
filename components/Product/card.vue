@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="rounded-xl flex flex-col overflow-clip"
-    @click="goToProduct('123')"
-  >
+  <div class="rounded-xl flex flex-col overflow-clip" @click="goToProduct()">
     <div class="h-72 overflow-clip rounded-xl">
       <img :src="props.product.thumbnail" class="w-full h-full object-cover" />
     </div>
@@ -21,8 +18,8 @@ const props = defineProps<{
   product: Product;
 }>();
 
-const goToProduct = (id: string) => {
-  navigateTo("/products/123");
+const goToProduct = () => {
+  navigateTo(`/products/${props.product.id}`);
 };
 
 const price = computed(() => {

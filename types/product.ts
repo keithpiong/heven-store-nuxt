@@ -2,13 +2,14 @@
 interface Product {
   id: string;
   title: string;
+  subtitle: string;
   description?: string;
   price?: string;
   handle?: string;
   thumbnail?: string;
   images?: ProductImage[];
   options?: ProductOptions[];
-  variants?: ProductVariant[];
+  variants: ProductVariant[];
 }
 
 // Define the UserDetails interface
@@ -32,6 +33,9 @@ interface ProductVariant {
   sku: string;
   options: ProductOptions[];
   product_id: string;
+  calculated_price: {
+    original_amount: number;
+  };
 }
 
 export type { Product };
