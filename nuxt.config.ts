@@ -35,6 +35,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      DEFAULT_REGION_ID: process.env.DEFAULT_REGION_ID,
       // API_URL: process.env.API_URL,
       // APP_ENV: process.env.APP_ENV || "development",
     },

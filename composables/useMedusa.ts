@@ -1,6 +1,7 @@
 import type { Product } from "~/types/product";
 
 export function useMedusa() {
+  const config = useRuntimeConfig();
   const client = useMedusaClient();
 
   const initCart = async () => {
@@ -23,14 +24,14 @@ export function useMedusa() {
 
   const getProducts = async () => {
     const { products } = await client.store.product.list({
-      region_id: "reg_01JENKMBTA7SW78K07JS6F5WE7",
+      region_id: config.public.DEFAULT_REGION_ID,
     });
     return products;
   };
 
   const getProductById = async (productId: string) => {
     const { product } = await client.store.product.retrieve(productId, {
-      region_id: "reg_01JENKMBTA7SW78K07JS6F5WE7",
+      region_id: config.public.DEFAULT_REGION_ID,
     });
     let obj = JSON.stringify(product);
     return JSON.parse(obj) as Product;
